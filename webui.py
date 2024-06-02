@@ -33,6 +33,7 @@ speakers_list = []
 for lang, code in SUPPORTED_LANGS:
     for n in range(10):
         speakers_list.append(f"{code}_speaker_{n}")
+speakers_list.append(f"/content/mavoix.npz")
 
 input_text = gr.Textbox(label="Input Text", lines=4, placeholder="Enter text here...")
 text_temp = gr.Slider(
@@ -57,4 +58,4 @@ interface = gr.Interface(
     description="A simple Bark TTS Web UI.",
 )
 
-interface.launch()
+interface.launch(share=True)
