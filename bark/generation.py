@@ -82,6 +82,7 @@ CACHE_DIR = os.path.join(os.getenv("XDG_CACHE_HOME", default_cache_dir), "suno",
 
 
 USE_SMALL_MODELS = os.environ.get("SUNO_USE_SMALL_MODELS", False)
+USE_SMALL_MODELS=True
 
 REMOTE_BASE_URL = "https://dl.suno-models.io/bark/models/v0/"
 if USE_SMALL_MODELS:
